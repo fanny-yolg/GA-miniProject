@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "miniMovie",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "ogmwowabrltuuu",
+    "password": "701d1554b655294bb648e8ce81d7498a8b0c4b0666d2fb4c2b45d4c4aea1b907",
+    "database": "d238rup413md4j",
+    "host": "ec2-34-234-185-150.compute-1.amazonaws.com",
+    "dialect": "postgres"
+  }
+}

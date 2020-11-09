@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project Team H</title>
+    <style>
+        body {
+            font-family: "Avenir", sans-serif;
+        }
+        table{
+            width: 500px;
+        }
+        th,td {
+            padding : 10px;
+        }
+        thead {
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add User</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quod, doloremque autem cupiditate eligendi sequi quo aliquam saepe ad fugiat, molestiae id vitae officiis voluptatum error itaque dolorum harum quia.</p>
+    
+    <a href="/">Home</a>
+    <a href="/users">Users</a>
+    <a href="/users/add">Add User</a>
+    
+    <h2>Ini halaman ADD  USER</h2>
+    <form action="/users/add" method="post" enctype="multipart/form-data">
+        <input type="text" name="username" id="username" placeholder="Username">
+        <input type="text" name="email" id="email" placeholder="Email">
+        <input type="text" name="password" id="password" placeholder="Password">
+        <input type="file" name="user_img" id="user_img">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

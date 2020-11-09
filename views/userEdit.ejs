@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project Team H</title>
+    <style>
+        body {
+            font-family: "Avenir", sans-serif;
+        }
+        table{
+            width: 500px;
+        }
+        th,td {
+            padding : 10px;
+        }
+        thead {
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit User</h1>
+    <a href="/">Home</a>
+    <a href="/users">Users</a>
+    <a href="/users/add">Add user</a>
+    
+    <h2>Ini halaman EDIT USER</h2>
+    <form action="/users/edit/<%= user.id %>" method="post" enctype="multipart/form-data">
+        <input type="text" name="username" id="username" value="<%= user.username %>">
+        <select name="roles" id="roles">
+            <%
+            var options = ["user", "admin"];
+            for ( var i = 0; i < options.length; i++ )
+            {
+                var isSelected = ( user.roles == options[i] ) ? "selected" : "";
+            %>  
+            <option value="<%=options[i]%>" <%=isSelected %>>
+                <%= options[i] %>
+            </option>
+            <%
+            }
+            %>
+        </select>
+
+        <input type="text" name="email" id="email" value="<%= user.email %>">
+        <input type="file" name="user_img" id="user_img">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

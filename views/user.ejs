@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project Team H</title>
+    <style>
+        body {
+            font-family: "Avenir", sans-serif;
+        }
+        table{
+            width: 500px;
+        }
+        th,td {
+            padding : 10px;
+        }
+        thead {
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>User List</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quod, doloremque autem cupiditate eligendi sequi quo aliquam saepe ad fugiat, molestiae id vitae officiis voluptatum error itaque dolorum harum quia.</p>
+    
+    <a href="/">Home</a>
+    <a href="/users">Users</a>
+    <a href="/users/add">Add User</a>
+    
+    <h2>Ini halaman USER LIST</h2>
+  
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Foto</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.username %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.roles %></td>
+                    <td><%= user.user_img %></td>
+                    <td>
+                        <a href="users/delete/<%= user.id %>">Delete</a>
+                        <a href="users/edit/<%= user.id %>">Edit</a>
+                        <a href="users/detail/<%= user.id %>">Detail</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
