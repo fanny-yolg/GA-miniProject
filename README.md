@@ -1,14 +1,18 @@
-# TeamH-Backend 
+# TeamH-Backend
+
 ```
-Creating movie-review app_
-This app has : RESTful endpoint for movie-review app CRUD operation
+Creating movie-review website and mobile app
+This app has : RESTful endpoint for movie-review website and mobile app CRUD operation
 Link Heroku : https://aqueous-savannah-95860.herokuapp.com
 ```
 
 ## RESTful endpoints for User Register - Login
+
 JSON formatted response
+
+```
 POST /register
-POST User to register
+Register for user
 Request Header
 not needed
 Request Body{
@@ -30,8 +34,11 @@ Response (201)[
 Response (400 - Bad Request){
 "message": ""
 }
+```
+
+```
 POST /login
-POST User to login
+Login for user
 Request Header
 not needed
 Request Body{
@@ -46,8 +53,10 @@ Response (200)[
 Response (400 - Bad Request){
 "message": ""
 }
+```
 
 ## RESTful endpoints for User CRUD Operation
+
 ```
 GET /users
 Get all users
@@ -72,6 +81,9 @@ Response (200)[
 Response (400 - Bad Request){
 "message": ""
 }
+```
+
+```
 POST /users
 Create new user
 Request Header{
@@ -99,6 +111,9 @@ Response (201 - Created){
 Response (400 - Bad Request){
 "message": ""
 }
+```
+
+```
 PUT /users/:id
 Update user by id
 Request Header{
@@ -126,6 +141,9 @@ Response (201 - Created){
 Response (400 - Bad Request){
 "message": ""
 }
+```
+
+```
 DELETE /users/:id
 delete user by id
 Request Header{
@@ -140,7 +158,9 @@ Response (400 - Bad Request){
 ```
 
 ## RESTful endpoints for movie
+
 ###### GET /movie/:page
+
 ```
 Get movie per page (12 movie/page)
 -Request Header:
@@ -161,10 +181,11 @@ not needed
 ```
 
 ###### GET /movie/id/:id
+
 ```
 get movie by movie id
 -Request Header
-not needed 
+not needed
 -Request Body
 not needed
 -Response (200)[
@@ -189,6 +210,7 @@ not needed
 ```
 
 ###### POST /movie
+
 ```
 Create new movie
 -Request Header
@@ -225,6 +247,7 @@ not needed_
 ```
 
 ###### GET /movie/genre/:genre
+
 ```
 find movie by genre (12 Movie/page)
 -Request Header
@@ -245,6 +268,7 @@ not needed
 ```
 
 ###### GET movie/find/:page
+
 ```
 find movie by title (12 page per movie)
 -Request Header
@@ -265,7 +289,9 @@ not needed
 ```
 
 ## RESTful endpoints for Actor
+
 ###### GET /actor
+
 ```
 Get all actor
 Request Header
@@ -285,6 +311,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### POST /actor
+
 ```
 Create new movie
 Request Header{
@@ -306,6 +333,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### PUT /actor/:id
+
 ```
 Update actor by id
 Request Header
@@ -325,6 +353,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### DELETE /actor/:id
+
 ```
 delete actor by id
 Request Header
@@ -336,11 +365,13 @@ Response (500 - Internal Server Error)
 ```
 
 ## RESTful endpoints for Charachter
+
 ###### GET /character
+
 ```
 Get all character
 Request Header
-not needed 
+not needed
 Request Body
 not needed
 Response (200)[
@@ -356,10 +387,11 @@ Response (500 - Internal Server Error)
 ```
 
 ###### GET /character/:id
+
 ```
 Get all character from the MovieId
 Request Header
-not needed 
+not needed
 Request Body
 not needed
 Response (200)[
@@ -374,8 +406,8 @@ Response (200)[
 Response (500 - Internal Server Error)
 ```
 
-
 ###### POST /character
+
 ```
 Create new character
 Request Header
@@ -397,6 +429,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### PUT /character/:id
+
 ```
 Update character by id
 Request Header
@@ -416,6 +449,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### DELETE /character/:id
+
 ```
 delete character by id
 Request Header
@@ -427,7 +461,9 @@ Response (500 - Internal Server Error)
 ```
 
 ## RESTful endpoints for Feature Song
+
 ###### GET /song
+
 ```
 Get all feature song
 Request Header
@@ -448,6 +484,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### GET /song/:id
+
 ```
 Get all feature song from movieId
 Request Header
@@ -468,6 +505,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### POST /song
+
 ```
 Create new song
 Request Header
@@ -491,6 +529,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### PUT /song/:id
+
 ```
 Update song by id
 Request Header{
@@ -512,6 +551,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### DELETE /song/:id
+
 ```
 delete song by id
 Request Header
@@ -523,7 +563,9 @@ Response (500 - Internal Server Error)
 ```
 
 ## RESTful endpoints for Review
+
 ###### GET /review
+
 ```
 Get all review where share is true
 Request Header
@@ -545,7 +587,9 @@ Response (200)[
 ]
 Response (500 - Internal Server Error)
 ```
+
 ###### GET /review/:id
+
 ```
 Get review by Movie where share is true
 Request Header
@@ -569,7 +613,8 @@ Response (500 - Internal Server Error)
 ```
 
 ###### GET /review/rating/:id
-``` 
+
+```
 Show rating by MovieId
 Request Header
 not needed
@@ -582,7 +627,9 @@ Response (200)
 }
 Response (500 - Internal Server Error)
 ```
+
 ###### POST /review/:MovieId
+
 ```
 Create new review by MovieId
 Request Header{
@@ -614,6 +661,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### PUT /review/:id
+
 ```
 Update review by id
 Request Header{
@@ -632,6 +680,7 @@ Response (500 - Internal Server Error)
 ```
 
 ###### DELETE /review/:id
+
 ```
 delete review by id
 Request Header{
